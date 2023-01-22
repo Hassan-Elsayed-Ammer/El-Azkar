@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--  the id of menu has to match id of same match fragment-->
+    <item
+        android:id="@id/morningAzkarFragment"
+        android:icon="@drawable/ic_morning"
+        android:title="Azkkar Morning" />
+    <item
+        android:id="@id/eveningAzkarFragment"
+        android:icon="@drawable/ic_night"
+        android:title="Azkkar ُevening" />
+
+    <item
+        android:id="@id/elsabhaFragment"
+        android:icon="@drawable/ic_hand"
+        android:title="el sabha" />
+
+</menu>

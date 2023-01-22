@@ -1,4 +1,4 @@
-package com.codestation.elazkar
+package com.codestation.elazkar.ui
 
 
 import androidx.lifecycle.LiveData
