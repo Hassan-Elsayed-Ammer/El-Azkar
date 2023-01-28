@@ -2,25 +2,32 @@ package com.codestation.elazkar.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.codestation.elazkar.R
+import com.codestation.elazkar.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     // create nav controller to use navigation in our main activity
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val toolBar = findViewById<Toolbar>(R.id.toolbar)
-        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //set action bar and bottom navigation with binding
+        val toolBar = binding.toolbar
+        val bottomNavigation = binding.bottomNavigation
 
 
 

@@ -8,10 +8,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import com.codestation.elazkar.R
+import com.codestation.elazkar.databinding.FragmentElsabhaBinding
 import com.codestation.elazkar.ui.MainActivityViewModel
 
 
 class ElsabhaFragment : Fragment() {
+
+    private lateinit var binding: FragmentElsabhaBinding
 
 //    private lateinit var viewModel: MainActivityViewModel
 //    private lateinit var tvCounter: TextView
@@ -23,7 +26,8 @@ class ElsabhaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_elsabha, container, false)
+        binding = FragmentElsabhaBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 //    viewModel = ViewModelProvider(this)[MainActivityViewModel::class.java]
