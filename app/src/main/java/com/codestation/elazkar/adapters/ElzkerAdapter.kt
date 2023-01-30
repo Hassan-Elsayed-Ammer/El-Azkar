@@ -22,7 +22,6 @@ class ElzkerAdapter(
 
     override fun onBindViewHolder(holder: ElzekrViewHolder, position: Int) {
         val elzekr = items[position]
-
         holder.binding.tvId.text = elzekr.id.toString()
         holder.binding.tvElzekr.text = elzekr.alzekr
         holder.binding.tvNumberOfRepetition.text = elzekr.numberOfRepetition

@@ -1,11 +1,14 @@
-package com.codestation.elazkar.ui
+package com.codestation.elazkar.ui.fragments.elsabha
 
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 
-class MainActivityViewModel : ViewModel() {
+class ElsabhaViewModel(
+    app: Application
+) : AndroidViewModel(app) {
 
 
     //1- counter mutable liveData
@@ -14,7 +17,7 @@ class MainActivityViewModel : ViewModel() {
     //2- counter LiveData
     val counterList: LiveData<Int> = _counterList
 
-    var counter = 0
+    private var counter = 0
 
 
     //add data in mutable LiveData
@@ -23,8 +26,12 @@ class MainActivityViewModel : ViewModel() {
         _counterList.value = counter
     }
 
+    fun resetCounter() {
+        counter = 0
+        _counterList.value = counter
+    }
 
-    // observer from live data
 
-    // sigin table live data to live data
+
+
 }

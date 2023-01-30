@@ -4,18 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.EveningAzkarFragment">
+    tools:context=".ui.fragments.evening.EveningAzkarFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_evening"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:listitem="@layout/elzekr_item"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/elzekr_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
