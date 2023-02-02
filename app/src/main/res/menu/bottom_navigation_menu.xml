@@ -5,15 +5,15 @@
     <item
         android:id="@id/morningAzkarFragment"
         android:icon="@drawable/ic_morning"
-        android:title="Azkkar Morning" />
+        android:title="@string/azkar_morning" />
     <item
         android:id="@id/eveningAzkarFragment"
         android:icon="@drawable/ic_night"
-        android:title="Azkkar ُevening" />
+        android:title="@string/azkar_evening" />
 
     <item
         android:id="@id/elsabhaFragment"
         android:icon="@drawable/ic_hand"
-        android:title="el sabha" />
+        android:title="@string/elsabha" />
 
 </menu>
