@@ -1,5 +1,6 @@
 package com.codestation.elazkar.ui
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -15,7 +16,6 @@ import com.codestation.elazkar.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
     private lateinit var appBarConfiguration: AppBarConfiguration
 
 
@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //set action bar and bottom navigation with binding
-        val toolBar = binding.toolbar
+        //val toolBar = binding.toolbar
+
         val bottomNavigation = binding.bottomNavigation
 
         appBarConfiguration = AppBarConfiguration(
@@ -41,19 +42,16 @@ class MainActivity : AppCompatActivity() {
 
         // create reference from nave host fragment
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
         // reassign the navController to nav host because nav host has already nav Controller to control on fragments that will appeared in feature
-        navController = navHostFragment.findNavController()
+        navController = navHostFragment!!.findNavController()
 
 
         // set Action bar
-        setSupportActionBar(toolBar)
-
-//        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-//        supportActionBar?.setHomeButtonEnabled(false)
+       // setSupportActionBar(toolBar)
 
         //make link between action bar and navController
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        //setupActionBarWithNavController(navController, appBarConfiguration)
 
 
         //set up bottom navigation view

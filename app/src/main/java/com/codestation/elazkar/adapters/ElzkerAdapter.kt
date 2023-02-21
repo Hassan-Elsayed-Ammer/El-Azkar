@@ -15,7 +15,9 @@ class ElzkerAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ElzekrViewHolder {
         val binding = ElzekrItemBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false
+            LayoutInflater.from(parent.context),
+            parent,
+            false
         )
         return ElzekrViewHolder(binding)
     }
