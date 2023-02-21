@@ -15,13 +15,10 @@ class MorningAzkarViewModel(
     app: Application
 ) : AndroidViewModel(app) {
 
-    // azkarArrayList  normal ArrayList
     private val azkarArrayList: ArrayList<ElZekr> = ArrayList()
 
-    // MutableLive data to set data and use it in logic
     private val _azkarMorningList: MutableLiveData<List<ElZekr>> = MutableLiveData<List<ElZekr>>()
 
-    //- live data to observing and read data
     val azkarMorningList: LiveData<List<ElZekr>> = _azkarMorningList
 
     private fun getAzkarMorningJSONFromAssets(context: Context): String? {
@@ -53,14 +50,12 @@ class MorningAzkarViewModel(
                 val numOfRepet = zeker.getString("numberOfRepetition")
 
                 val elzekrDetails = ElZekr(id, alzekr, numOfRepet)
-                //add details to the list
                 azkarArrayList.add(elzekrDetails)
             }
 
         } catch (e: JSONException) {
             Log.d("morning fragment", e.message.toString())
         }
-        // assgin normal array list to live data array list
         _azkarMorningList.value = azkarArrayList
     }
 

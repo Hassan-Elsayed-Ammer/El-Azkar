@@ -1,6 +1,5 @@
 package com.codestation.elazkar.ui.fragments.morning
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.codestation.elazkar.adapters.ElzkerAdapter
-import com.codestation.elazkar.databinding.ActivityMainBinding
 import com.codestation.elazkar.databinding.FragmentMorningAzkarBinding
 
 
@@ -22,7 +20,6 @@ class MorningAzkarFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentMorningAzkarBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this)[MorningAzkarViewModel::class.java]
 
